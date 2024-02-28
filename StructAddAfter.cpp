@@ -1,3 +1,5 @@
+// Добавлено AddAfter, добавить в середине, добавить delete, (6 функций)
+//
 #include <iostream>
 using namespace std;
 
@@ -11,6 +13,10 @@ struct order {
     int order_id;
     tovar* items;
     order* next;
+};
+struct group {
+	int group_num;
+	tovar* next;
 };
 
 void AddFirst(tovar*& head, int id, int p) {
@@ -54,6 +60,9 @@ void AddAfter(tovar*& head, int id, int new_id, int p) {
     cout << "ID not found in the list." << endl;
 }
 
+void AddGroup (group*& head, int group_num) {
+	}
+
 void Printlist(tovar* head) {
     tovar* tmp = head;
     while (tmp != nullptr) {
@@ -93,9 +102,11 @@ int main() {
 
     cout << "List of orders:" << endl;
     PrintOrders(head_order);
+    
+    cout << "List of product groups" << endl;
+    
 
-    // Adding a new item after id 1 in the items list
-    cout << "Adding a new item after ID 1..." << endl;
+    cout << "Adding a new item after " << endl;
     AddAfter(head_tovar, 1, 3, 30);
 
     cout << "Updated list of items:" << endl;

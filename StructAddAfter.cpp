@@ -61,7 +61,8 @@ void AddAfter(tovar*& head, int id, int new_id, int p) {
 }
 
 void AddGroup (group*& head, int group_num) {
-	}
+}
+	
 
 void Printlist(tovar* head) {
     tovar* tmp = head;
